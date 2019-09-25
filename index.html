@@ -30,12 +30,10 @@
 
 	<div class="container-fluid">
 		<div class="row">
-			<section id="home" class="video-hero js-fullheight col-md-6"
+			<section id="home" class="video-hero js-fullheight col-lg-6"
 			         style="height: 700px; background-image: url(images/bg_1.jpg); background-size:cover; background-position: top center;"
 			         data-stellar-background-ratio="0.5">
 				<div class="overlay"></div>
-				<a class="player"
-				   data-property="{videoURL:'https://www.youtube.com/watch?v=Mjjw19B7rMk',containment:'#home', showControls:false, autoPlay:true, loop:true, mute:true, startAt:0, opacity:1, quality:'default',optimizeDisplay:true}"></a>
 				<div class="container">
 					<div class="row js-fullheight justify-content-center d-flex align-items-center">
 						<div class="col-md-12">
@@ -57,15 +55,46 @@
 				</div>
 			</section>
 
-			<section class="ftco-section bg-light col-md-6" id="when-where-section">
+			<section class="ftco-section bg-light col-lg-6" id="when-where-section">
 				<div class="container">
-					<div class="row justify-content-center pb-5">
-						<div class="col-md-12 text-center heading-section ftco-animate">
-							<h2 class="mb-3">¡Importante!</h2>
+					<div class="row pb-5">
+						<div class="col-lg-6">
+							<div class="card">
+								<div class="card-body">
+									<h5 class="card-title">
+										<div class="col-md-12 text-center heading-section ftco-animate">
+											<h2 class="mb-3">
+												<div class="icon flaticon-reception-bell"></div>
+												Colectivo
+											</h2>
+										</div>
+									</h5>
+									<p class="card-text">Tenemos nuestra casa completa, pero nos falta la luna de miel</p>
+									<p>
+										<a href="#" class="card-link" style="cursor: default;">Cuenta BBVA: 0011-0814-0202118718</a><br/>
+										<a href="#" class="card-link" style="cursor: default;">Cuenta Interbancaria: 011-814-000202118718-18</a>
+									</p>
+									<p class="card-text" style="font-size: 12px">Nombre: Sebastian Burgos<br/>DNI: 71318845</p>
+								</div>
+							</div>
 						</div>
-					</div>
-					<div class="row">
-						<div class="col-md-6 ftco-animate">
+						<div class="col-lg-6">
+							<div class="card">
+								<div class="card-body" style="background: url('images/small-flowers-background-border-flowers-flower-film-frame-pink-picture-frame.jpg') top center no-repeat; ">
+									<h5 class="card-title">
+										<div class="col-md-12 text-center heading-section ftco-animate">
+											<h2 class="mb-3">
+												<div class="icon flaticon-wedding-kiss"></div>
+												Código de Novios
+											</h2>
+										</div>
+									</h5>
+									<p class="card-text">Pero si igual quieres darnos un presente, estaremos muy felices de recibirlo.</p>
+									<a href="#" class="card-link" style="cursor: default;">Código de Novios: 613653-02</a>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6 ftco-animate fadeInUp ftco-animated">
 							<div class="place img" style="background-image: url(images/place-2.jpg);">
 								<div class="text text-center">
 									<span class="icon flaticon-wedding-kiss"></span>
@@ -77,79 +106,11 @@
 								</div>
 							</div>
 						</div>
-						<div class="col-md-6 ftco-animate">
-							<div class="place img" style="background-image: url(images/place-1.jpg);">
-								<div class="text text-center">
-									<span class="icon flaticon-reception-bell"></span>
-									<h3>Código de Novios</h3>
-									<p>Saga Falabella</p>
-									<p>123456789</p>
-								</div>
-							</div>
-						</div>
 					</div>
-
-					<div class="arrow bounce">
-						Confírmanos tu asistencia
-						<br/>
-						<a class="fa fa-arrow-down fa-2x flechita" href="#"></a>
-					</div>
-
 				</div>
 			</section>
 		</div>
 	</div>
-
-	<section class="ftco-section bg-secondary" id="rsvp-section">
-		<div class="container">
-			<div class="row justify-content-center pb-5">
-				<div class="col-md-12 text-center heading-section ftco-animate">
-					<h2 class="mb-3">Confírmanos tu asistencia</h2>
-				</div>
-			</div>
-			<div class="row justify-content-center">
-				<div class="col-md-7">
-					<form action="#" class="rsvp-form ftco-animate">
-						<div class="">
-							<div class="form-group">
-								<input type="text" class="form-control" placeholder="Nombre">
-							</div>
-							<div class="form-group">
-								<input type="email" class="form-control" placeholder="email">
-							</div>
-						</div>
-						<div class="">
-							<div class="form-group">
-								<div class="form-field">
-									<div class="select-wrap">
-										<div class="icon d-flex align-items-center justify-content-center"><span
-											class="ion-ios-arrow-down"></span></div>
-										<select name="" id="" class="form-control">
-											<option value="">Invitados</option>
-											<option value="">1</option>
-											<option value="">2</option>
-											<option value="">3</option>
-											<option value="">4</option>
-											<option value="">5</option>
-										</select>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="">
-							<div class="form-group">
-								<textarea name="" id="" cols="30" rows="2" class="form-control"
-								          placeholder="Mensaje"></textarea>
-							</div>
-							<div class="form-group">
-								<input type="submit" value="confirmar asistecia" class="btn btn-primary py-3 px-4">
-							</div>
-						</div>
-					</form>
-				</div>
-			</div>
-		</div>
-	</section>
 
 
 <script src="js/jquery.min.js"></script>
@@ -165,8 +126,7 @@
 <script src="js/jquery.animateNumber.min.js"></script>
 <script src="js/jquery.mb.YTPlayer.min.js"></script>
 <script src="js/scrollax.min.js"></script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
-<script src="js/google-map.js"></script>
+
 
 <script src="js/main.js"></script>
 
