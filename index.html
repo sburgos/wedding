@@ -57,14 +57,14 @@
 				</div>
 			</section>
 
-			<section class="bg-light col-lg-6" id="when-where-section">
+			<!--<section class="bg-light col-lg-6" id="when-where-section">
 				<div class="container">
 					<div class="row pb-5">
-						<div class="col-lg-12">
+						<div class="col-lg-6">
 							<div class="card" style="background: #d8c0b5; color: #fff">
 								<div class="card-body">
 									<h5 class="card-title">
-										<div class="col-md-12 text-left heading-section ftco-animate">
+										<div class="col-md-12 text-center heading-section ftco-animate">
 											<h2 class="mb-3" style="color: #fff">
 												<span class="icon flaticon-reception-bell"></span>
 												Colectivo
@@ -80,17 +80,13 @@
 								</div>
 							</div>
 						</div>
-					</div>
-				</div>
-				<div class="container">
-					<div class="row pb-5">
-						<div class="col-lg-12">
+						<div class="col-lg-6">
 							<div class="card">
 								<div class="card-body">
 									<h5 class="card-title">
-										<div class="col-md-12 text-left heading-section ftco-animate">
+										<div class="col-md-12 text-center heading-section ftco-animate">
 											<h2 class="mb-3">
-												<span class="icon flaticon-wedding-kiss"></span>
+												<span class="icon flaticon-wedding-kiss"></span><br/>
 												Código de Novios
 											</h2>
 										</div>
@@ -99,6 +95,82 @@
 									<a href="#" class="card-link" style="cursor: default;">Código de Novios: 613653-02</a>
 								</div>
 							</div>
+						</div>
+					</div>
+				</div>
+			</section>-->
+
+			<section class="ftco-section bg-section col-lg-6">
+				<div class="overlay-top" style="background-image: url(images/top-bg.jpg);"></div>
+				<div class="overlay-bottom" style="background-image: url(images/bottom-bg.jpg);"></div>
+				<div class="container">
+					<div class="row justify-content-center pb-5">
+						<div class="col-md-12 text-center heading-section ftco-animate fadeInUp ftco-animated">
+							<span class="clone">Colectivo</span>
+							<h2 class="mb-3">Colectivo</h2>
+						</div>
+					</div>
+					<div class="row justify-content-center">
+						<div class="col-md-10">
+							<div class="row">
+								<div class="col-md-12 text-center d-flex align-items-stretch">
+									<div class="bride-groom ftco-animate fadeInUp ftco-animated">
+										<div class="text mt-5 px-5">
+											<h2>Tenemos nuestra casa completa, pero nos falta la luna de miel</h2>
+											<p>BBVA Soles: 0011-0814-0202118718<br/>BBVA CCI: 011-814-000202118718-18</p>
+											<p class="card-text">Nombre: Sebastian Burgos<br/>DNI: 71318845</p>
+											<h6>Código de novios Falabella: 613653-02</h6>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="ftco-section bg-secondary col-lg-12" id="rsvp-section">
+				<div class="container">
+					<div class="row justify-content-center pb-5">
+						<div class="col-md-12 text-center heading-section ftco-animate fadeInUp ftco-animated">
+							<span class="clone">Te esperamos</span>
+							<h2 class="mb-3">Confirma tu asistencia</h2>
+						</div>
+					</div>
+					<div class="row justify-content-center">
+						<div class="col-md-7">
+							<form action="#" class="rsvp-form ftco-animate fadeInUp ftco-animated" id="contactForm">
+								<div class="">
+									<div class="form-group">
+										<input type="text" class="form-control" placeholder="Nombre" id="name">
+									</div>
+								</div>
+								<div class="">
+									<div class="form-group">
+										<div class="form-field">
+											<div class="select-wrap">
+												<div class="icon d-flex align-items-center justify-content-center"><span class="ion-ios-arrow-down"></span></div>
+												<select name="invi" id="invi" class="form-control">
+													<option value="">Invitados</option>
+													<option value="1">1</option>
+													<option value="2">2</option>
+													<option value="3">3</option>
+													<option value="4">4</option>
+													<option value="5">5</option>
+												</select>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="">
+									<div class="form-group">
+										<textarea name="" id="mensaje" cols="30" rows="2" class="form-control" placeholder="Déjanos un mensaje"></textarea>
+									</div>
+									<div class="form-group">
+										<input type="submit" value="Confirmo" class="btn btn-primary py-3 px-4">
+									</div>
+								</div>
+							</form>
 						</div>
 					</div>
 				</div>
@@ -124,5 +196,39 @@
 
 <script src="js/main.js"></script>
 
+
+	<script type="text/javascript"
+	        src="https://cdn.jsdelivr.net/npm/emailjs-com@2.4.0/dist/email.min.js">
+	</script>
+	<script type="text/javascript">
+		(function(){
+			emailjs.init("user_8KoUcGu7p1EfYX9p4PRNe");
+		})();
+
+		const form = document.getElementById('contactForm'); // Obtenemos la referencia al formulario
+
+		if(form){ // Si existe nuestro elemento en memoria este se quedara escuchando al evento submit del formulario
+			form.addEventListener('submit', contactForm); // Al momento de enviar el formulario, ejecuta la función "contactform"
+		}
+
+		function contactForm(event) {
+			event.preventDefault();
+			var templateParams = {
+				name: document.getElementById('name').value,
+				invitados: document.getElementById('invi').value,
+				mensaje: document.getElementById('mensaje').value
+			};
+
+			emailjs.send('default_service', 'invitados', templateParams)
+				.then(function(response) {
+					alert("Gracias, hemos recibido tu mensaje. ¡Te esperamos!");
+					return false;
+				}, function(error) {
+					alert("Al parecer no está funcionando el formulario. Confírmame tu asistencia a mi correo: sebastianburgos812@hotmail.com");
+					return false;
+				});
+		}
+
+	</script>
 </body>
 </html>
