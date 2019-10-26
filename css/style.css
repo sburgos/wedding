@@ -74,7 +74,8 @@ h1, h2, h3, h4, h5, h6 {
 
 p {
   margin-top: 0;
-  margin-bottom: 1rem; }
+  margin-bottom: 0; 
+}
 
 abbr[title],
 abbr[data-original-title] {
@@ -6612,8 +6613,7 @@ button.bg-dark:focus {
   margin-right: 1rem !important; }
 
 .mb-3,
-.my-3 {
-  margin-bottom: 1rem !important; }
+.my-3 {}
 
 .ml-3,
 .mx-3 {
@@ -8429,8 +8429,9 @@ h5,
     width: 100%; }
     .video-hero .text .icon span {
       line-height: 0;
-      font-size: 14vw;
-      color: #fff; }
+      font-size: 8vw;
+      color: #fff; 
+    }
     .video-hero .text .subheading {
       font-size: 12px;
       font-weight: 600;
@@ -8458,9 +8459,11 @@ h5,
         .video-hero .text .subheading:after, .video-hero .text .subheading:before {
           display: none; } }
     .video-hero .text h1 {
+      text-shadow: 3px 4px 8px black;
       font-family: "Great Vibes", cursive;
       font-size: 9vw;
-      color: #fff; }
+      color: #fff;
+      color: #f67e7d;}
 
 #timer {
   width: 60%;
@@ -8721,7 +8724,7 @@ textarea.form-control {
 .bg-section {
   position: relative;
   z-index: 0;
-  padding: 14em 0 !important; }
+ }
   .bg-section .overlay-top {
     position: absolute;
     top: 0;
@@ -8729,7 +8732,7 @@ textarea.form-control {
     right: 0;
     content: '';
     width: 100%;
-    height: 300px;
+    height: 200px;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: bottom center; }
@@ -8740,7 +8743,7 @@ textarea.form-control {
     right: 0;
     content: '';
     width: 100%;
-    height: 300px;
+    height: 200px;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: top center; }
@@ -9733,6 +9736,31 @@ textarea.form-control {
   -webkit-animation: loader-dash 1.5s ease-in-out infinite;
   animation: loader-dash 1.5s ease-in-out infinite;
   stroke-linecap: round; }
+
+  .section-title{
+    line-height: 28px;
+    font-size: 22px;
+    color: #f67e7d;
+    padding-top: 30px;
+  }
+  .line-height--small{
+    line-height: 22px;
+  }
+  .center{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  @media (max-width: 650px) {
+    .center{
+      position: static;
+      transform: translate(0);
+    }
+    .video-hero .text .icon span{
+      font-size: 18vw;
+    }
+  }
 
 @-webkit-keyframes loader-rotate {
   100% {
