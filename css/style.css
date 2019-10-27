@@ -6643,7 +6643,7 @@ button.bg-dark:focus {
 
 .mt-5,
 .my-5 {
-  margin-top: 3rem !important; }
+  margin-top: 1rem !important; }
 
 .mr-5,
 .mx-5 {
@@ -6761,7 +6761,7 @@ button.bg-dark:focus {
 
 .pr-5,
 .px-5 {
-  padding-right: 3rem !important; }
+  padding-right: 1rem !important; }
 
 .pb-5,
 .py-5 {
@@ -6769,7 +6769,7 @@ button.bg-dark:focus {
 
 .pl-5,
 .px-5 {
-  padding-left: 3rem !important; }
+  padding-left: 1rem !important; }
 
 .m-n1 {
   margin: -0.25rem !important; }
@@ -8442,17 +8442,17 @@ h5,
       .video-hero .text .subheading:before {
         position: absolute;
         top: 50%;
-        left: -150px;
+        left: -120px;
         content: '';
-        width: 130px;
+        width: 100px;
         height: 2px;
         background: #fff; }
       .video-hero .text .subheading:after {
         position: absolute;
         top: 50%;
-        right: -140px;
+        right: -120px;
         content: '';
-        width: 130px;
+        width: 100px;
         height: 2px;
         background: #fff; }
       @media (max-width: 767.98px) {
@@ -8463,7 +8463,9 @@ h5,
       font-family: "Great Vibes", cursive;
       font-size: 9vw;
       color: #fff;
-      color: #f67e7d;}
+      color: #f67e7d;
+      line-height: 120px;
+      margin: 50px 0;}
 
 #timer {
   width: 60%;
@@ -8547,9 +8549,11 @@ textarea.form-control {
   .btn:hover, .btn:active, .btn:focus {
     outline: none; }
   .btn.btn-primary {
+    padding: 10px 30px!important;
     background: #f67e7d;
     border: 1px solid #f67e7d !important;
-    color: #fff !important; }
+    color: #fff !important;
+    border-radius: 15px;}
     .btn.btn-primary:hover {
       border: 1px solid #f67e7d;
       background: #f67e7d;
@@ -8687,7 +8691,7 @@ textarea.form-control {
   z-index: 0; }
   .bride-groom:before {
     position: absolute;
-    top: 40px;
+    top: 20px;
     left: 0;
     right: 0;
     bottom: -40px;
@@ -8699,7 +8703,7 @@ textarea.form-control {
     transform: rotate(-1deg); }
   .bride-groom:after {
     position: absolute;
-    top: 40px;
+    top: 20px;
     left: 0;
     right: 0;
     bottom: -40px;
@@ -8890,8 +8894,12 @@ textarea.form-control {
       padding: 8px 10px; }
 
 .rsvp-form {
-  padding: 70px 50px 50px 50px;
-  background: #fff; }
+  padding: 30px;
+  background: rgba(246, 126, 125, 0.49);
+  border-radius: 15px;
+  -webkit-box-shadow: 0 13px 27px -5px rgba(50,50,93,.25), 0 8px 16px -8px rgba(0,0,0,.3), 0 -6px 16px -6px rgba(0,0,0,.025);
+  box-shadow: 0 13px 27px -5px rgba(50,50,93,.25), 0 8px 16px -8px rgba(0,0,0,.3), 0 -6px 16px -6px rgba(0,0,0,.025);
+}
   .rsvp-form .form-group {
     margin-bottom: 30px; }
   .rsvp-form .select-wrap {
@@ -9028,7 +9036,13 @@ textarea.form-control {
   position: relative; }
   @media (max-width: 767.98px) {
     .ftco-section {
-      padding: 6em 0; } }
+      padding: 10em 0; 
+    } 
+    #rsvp-section{
+      padding: 5em 0; 
+    }
+
+  }
 
 .ftco-no-pt {
   padding-top: 0 !important; }
@@ -9745,6 +9759,8 @@ textarea.form-control {
   }
   .line-height--small{
     line-height: 22px;
+    color: rgba(51, 51, 51, 0.95);
+    font-weight: 300;
   }
   .center{
     position: absolute;
@@ -9759,6 +9775,25 @@ textarea.form-control {
     }
     .video-hero .text .icon span{
       font-size: 18vw;
+    }
+    .desktop {
+      display: none !important;
+    }
+    .video-hero .text h1{
+      margin: 40px 0;
+      text-shadow: 3px 4px 8px black;
+      font-family: "Great Vibes", cursive;
+      font-size: 20vw;
+      color: #fff;
+      color: #f67e7d;
+      line-height: 65px;
+    }
+    .section-title{
+      font-weight: 300;
+      line-height: 25px;
+      font-size: 19px;
+      color: #f67e7d;
+      padding-top: 30px;
     }
   }
 
